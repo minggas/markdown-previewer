@@ -1,31 +1,58 @@
-import React, { Component } from 'react';
-import Editor from './components/Editor';
-import Previewer from './components/Previewer';
 import './App.css';
+import React from 'react';
+import { MarkdownPreview } from 'react-marked-markdown';
+import { MarkdownInput } from 'react-marked-markdown';
 
-class App extends Component {
-  constructor(props){
-    super(props);
-
-    this.state = {
-      rawMark: '',
+class App extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        value: props.defaultValue ? props.defaultValue : '',
+      };
     }
-
-    this.handleTextChange = this.handleTextChange.bind(this);
+    handleTextChange(e) {
+      this.setState({ value: e.target.value });
+      if (this.props.onTextChange) {
+        this.props.onTextChange(e.target.value);
+      }
+    }
+    clear() {
+      this.setState({ value: '' });
+    }
+    render() {
+      const {
+        placeholder,
+        className,
+        inputClassName,
+        inputId,
+        previewId,
+        previewClassName
+      } = this.props;
+      const { value } = this.state;
+      return (
+        <section className={ className }>
+          <div>
+            <h2>Editor</h2>
+          <MarkdownInput
+            placeholder={ placeholder }
+            onChange={ this.handleTextChange.bind(this) }
+            value={ value }
+            className={ inputClassName }
+            id={inputId}
+          />
+          </div>
+  
+          <div>
+            <h2>previewer</h2>
+            <MarkdownPreview
+            value={ value }
+            className={ previewClassName }
+            id={previewId}
+          />
+          </div>
+        </section>
+      );
+    }
   }
 
-  handleTextChange(e) {
-    this.setState({rawMark: e.target.value});
-  }
-
-  render() {
-    return (
-      <div>
-      <Editor enterText={this.handleTextChange}/>
-      <Previewer>{this.state.rawMark}</Previewer>
-      </div>
-    );
-  }
-}
-
-export default App;
+  export default App;
