@@ -1,12 +1,32 @@
 .previewer {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
-  padding: 50px 5%;
+  padding: 20px 5%;
 }
 
-.editor {
+.toolbar-title {
+  background-color: rgb(39, 91, 187);
+  color: #eee;
+  padding: 5px 10px;
+}
+
+.wrap {
+  width: 70%;  
+  margin: 0 auto 50px auto;
+  min-height: 200px;  
+  box-shadow: 0 0 5px #333;
+  border-radius: 3px;
+}
+
+.pw-wrap {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.editor, .preview {
   display: block;
   width: 100%;
-  height: 300px;
+  min-height: 200px;
+  padding: 2% 5%;
   resize: vertical;
 }
