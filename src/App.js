@@ -3,6 +3,7 @@ import React from 'react';
 import { MarkdownPreview } from 'react-marked-markdown';
 import { MarkdownInput } from 'react-marked-markdown';
 
+
 class App extends React.Component {
     constructor(props) {
       super(props);
@@ -29,10 +30,11 @@ class App extends React.Component {
         previewClassName
       } = this.props;
       const { value } = this.state;
+
       return (
         <section className={ className }>
-          <div>
-            <h2>Editor</h2>
+          <div className='wrap'>
+            <h4 className='toolbar-title'>Editor</h4>
           <MarkdownInput
             placeholder={ placeholder }
             onChange={ this.handleTextChange.bind(this) }
@@ -42,8 +44,8 @@ class App extends React.Component {
           />
           </div>
   
-          <div>
-            <h2>previewer</h2>
+          <div className='wrap pw-wrap'>
+            <h4 className='toolbar-title'>Previewer</h4>
             <MarkdownPreview
             value={ value }
             className={ previewClassName }

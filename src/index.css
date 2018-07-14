@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 html {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 *, *::after, *::before {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+}
+
+.app-title {
+  text-align: center;
+  padding: 15px;
 }

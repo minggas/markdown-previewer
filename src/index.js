@@ -10,7 +10,7 @@ const param = {
     inputClassName: 'editor' ,
     previewClassName: 'preview',
     inputId: 'editor',
-    previewId: 'preview'
+    previewId: 'preview'    
 }
 
 ReactDOM.render(<App {...param}/>, document.getElementById('root'));
