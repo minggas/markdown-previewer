@@ -1,33 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+html {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: hsl(0, 1%, 72%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.app-title {
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+  font-size: 2.2em;
+}
 .previewer {
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   padding: 20px 5%;
 }
 
 .toolbar-title {
-  background-color: rgb(39, 91, 187);
-  color: #eee;
-  padding: 5px 10px;
+  background-color: aqua;
+  padding: 5px;
   margin: 0;
+  border-radius: 5px 5px 0 0;
 }
 
 .wrap {
-  width: 70%;  
-  margin: 0 auto 50px auto;
-  min-height: 200px;  
-  box-shadow: 0 0 5px #333;
-  border-radius: 3px;
+  width: 70%;
+  margin: 0 auto 20px;
+  min-height: 200px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0px #333;
 }
 
 .pw-wrap {
   width: 100%;
-  margin-bottom: 20px;
 }
 
-.editor, .preview {
+.editor,
+.preview {
   display: block;
   width: 100%;
   min-height: 200px;
-  padding: 2% 5%;
+  padding: 5px;
   resize: vertical;
+  background-color: #fff;
+}
+
+blockquote {
+  border-left: 3px solid slategray;
+  color: #224b4b;
+  padding-left: 5px;
+  margin-left: 25px;
+}
+
+code {
+  background: lightgray;
+  padding: 1px 4px 2px 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+pre {
+  background: lightgray;
 }
