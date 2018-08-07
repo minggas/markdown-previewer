@@ -1,26 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-html {
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
-body {
-  background-color: hsl(0, 1%, 72%);
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-
-.app-title {
-  text-align: center;
-  padding: 15px;
-  margin: 0;
-  font-size: 2.2em;
-}
 .previewer {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   padding: 20px 5%;
 }
@@ -38,6 +17,7 @@ body {
   min-height: 200px;
   border-radius: 5px;
   box-shadow: 0 0 10px 0px #333;
+  position: relative;
 }
 
 .pw-wrap {
@@ -54,6 +34,21 @@ body {
   background-color: #fff;
 }
 
+.wrap .clear-btn {
+  position: absolute;
+  right: 5%;
+  top: 3%;
+  border-radius: 3px;
+  border: none;
+  color: hsla(0, 20%, 20%, 0.7);
+}
+
+.wrap .clear-btn:hover,
+.wrap .clear-btn:active {
+  color: hsla(0, 0%, 0%, 1);
+  border: 1px solid hsl(0, 0%, 50%);
+}
+
 blockquote {
   border-left: 3px solid slategray;
   color: #224b4b;
@@ -67,6 +62,7 @@ code {
   font-size: 12px;
   font-weight: bold;
 }
+
 pre {
   background: lightgray;
 }
