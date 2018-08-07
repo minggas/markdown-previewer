@@ -3,11 +3,14 @@ import PropTypes from "prop-types";
 
 const MarkdownPreview = props => {
   return (
-    <div
-      id={props.id}
-      dangerouslySetInnerHTML={props.value}
-      className={props.className}
-    />
+    <div className="wrap pw-wrap">
+      <h3 className="toolbar-title">Previewer</h3>
+      <div
+        id={props.id}
+        dangerouslySetInnerHTML={props.value}
+        className={props.className}
+      />
+    </div>
   );
 };
 

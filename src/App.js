@@ -44,25 +44,20 @@ class App extends React.Component {
     };
     return (
       <section className={className}>
-        <div className="wrap">
-          <h3 className="toolbar-title">Editor</h3>
-          <MarkdownInput
-            placeholder={placeholder}
-            onChange={this.handleTextChange.bind(this)}
-            value={value}
-            className={inputClassName}
-            id={inputId}
-          />
-        </div>
+        <MarkdownInput
+          placeholder={placeholder}
+          onChange={this.handleTextChange.bind(this)}
+          value={value}
+          className={inputClassName}
+          id={inputId}
+          clearBtn={this.clear}
+        />
 
-        <div className="wrap pw-wrap">
-          <h3 className="toolbar-title">Previewer</h3>
-          <MarkdownPreview
-            value={mark}
-            className={previewClassName}
-            id={previewId}
-          />
-        </div>
+        <MarkdownPreview
+          value={mark}
+          className={previewClassName}
+          id={previewId}
+        />
       </section>
     );
   }
