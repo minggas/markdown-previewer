@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+//import registerServiceWorker from './registerServiceWorker';
 
 const param = {
-    placeholder: "",
-    className: "previewer",
-    inputClassName: "editor",
-    previewClassName: "preview",
-    inputId: "editor",
-    previewId: "preview",
-    defaultValue: `
+  placeholder: "",
+  className: "previewer",
+  inputClassName: "editor",
+  previewClassName: "preview",
+  inputId: "editor",
+  previewId: "preview",
+  defaultValue: `
 # MARKDOWN PREVIEWER
 ## A FCC project
 You can make your text **bold** or  put some *emphasis* on it.
@@ -41,5 +41,5 @@ This is a list
 Here you can find more about [marked](https://marked.js.org/ "link to marked page")`
 };
 
-ReactDOM.render(<App {...param}/>, document.getElementById('root'));
-registerServiceWorker();
+ReactDOM.render(<App {...param} />, document.getElementById("root"));
+//registerServiceWorker();
