@@ -1,14 +1,16 @@
-import React from 'react';
-import marked from 'marked';
-import './App.css';
+import React from "react";
+import marked from "marked";
+import MarkdownInput from "./components/MarkdownInput";
+import MarkdownPreview from "./components/MarkdownPreview";
+import "./App.css";
 
 const renderer = new marked.Renderer();
-renderer.link = function (href, title, text) {
+renderer.link = function(href, title, text) {
   return `<a target="_blank" href="${href}">${text}</a>`;
-}
+};
 
 marked.setOptions({
-  breaks: true,
+  breaks: true
 });
 
 class App extends React.Component {
@@ -18,15 +20,15 @@ class App extends React.Component {
       value: props.defaultValue ? props.defaultValue : ""
     };
   }
-  handleTextChange(e) {
+  handleTextChange = e => {
     this.setState({ value: e.target.value });
     if (this.props.onTextChange) {
       this.props.onTextChange(e.target.value);
     }
-  }
-  clear() {
+  };
+  clear = () => {
     this.setState({ value: "" });
-  }
+  };
   render() {
     const {
       placeholder,
@@ -37,7 +39,9 @@ class App extends React.Component {
       previewClassName
     } = this.props;
     const { value } = this.state;
-    const mark = { __html: marked(this.state.value,{ renderer: renderer, sanitize: true}) };
+    const mark = {
+      __html: marked(this.state.value, { renderer: renderer, sanitize: true })
+    };
     return (
       <section className={className}>
         <div className="wrap">
@@ -53,7 +57,7 @@ class App extends React.Component {
 
         <div className="wrap pw-wrap">
           <h3 className="toolbar-title">Previewer</h3>
-          <MarkedPreview
+          <MarkdownPreview
             value={mark}
             className={previewClassName}
             id={previewId}
@@ -63,26 +67,5 @@ class App extends React.Component {
     );
   }
 }
-
-const MarkdownInput = props => {
-  return (
-    <textarea
-      id={props.id}
-      onChange={props.onChange}
-      value={props.value}
-      className={props.className}
-    />
-  );
-};
-
-const MarkedPreview = props => {
-  return (
-    <div
-      id="preview"
-      dangerouslySetInnerHTML={props.value}
-      className={props.className}
-    />
-  );
-};
 
 export default App;
