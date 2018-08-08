@@ -5,6 +5,9 @@ const MarkdownInput = props => {
   return (
     <div className="wrap">
       <h3 className="toolbar-title">Editor</h3>
+      <button onClick={props.clearBtn} className="clear-btn">
+        Clear
+      </button>
       <textarea
         id={props.id}
         onChange={props.onChange}
