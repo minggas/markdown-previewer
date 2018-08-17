@@ -14,6 +14,7 @@ const param = {
   defaultValue: `
 # MARKDOWN PREVIEWER
 ## A FCC project
+---
 You can make your text **bold** or  put some *emphasis* on it.
   
 \`<div>this is a line of code</div>\`
@@ -25,8 +26,18 @@ if(blockcode){
 \`\`\`
 
 This is a list
-* First item
-* Second item
+1. First ordered list item
+2. Another item
+  * Unordered sub-list. 
+1. Actual numbers don't matter, just that it's a number
+  1. Ordered sub-list
+4. And another item.  
+   
+   Some text that should be aligned with the above item.
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
   
 >  
 > This is first level of blockquote
@@ -36,7 +47,13 @@ This is a list
 > Back to the first level
 >
 
-![This is a kitten](https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=150)
+| Tables | Are | Cool |
+| --- |:---:| ---:|
+| col 3 is | right-aligned | $1600 |
+| col 2 is | centered | $12 |
+| zebra stripes | are neat | $1 |
+
+![alt text](https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=250&w=150 "This is a kitty")
   
 Here you can find more about [marked](https://marked.js.org/ "link to marked page")`
 };
