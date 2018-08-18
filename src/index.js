@@ -59,11 +59,5 @@ This is a list
 Here you can find more about [marked](https://marked.js.org/ "link to marked page")`
 };
 
-ReactDOM.render(
-  <div>
-    <GitRibbon />
-    <App {...param} />
-  </div>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App {...param} />, document.getElementById("root"));
 //registerServiceWorker();
