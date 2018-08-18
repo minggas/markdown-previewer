@@ -1,7 +1,7 @@
 .previewer {
   width: 100%;
   min-height: 100vh;
-  padding: 20px 0.5rem;
+  padding: 20px 0.5rem 0;
 }
 
 .toolbar-title {

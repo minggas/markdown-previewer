@@ -2,6 +2,7 @@ import React from "react";
 import marked from "marked";
 import MarkdownInput from "./components/MarkdownInput";
 import MarkdownPreview from "./components/MarkdownPreview";
+import Footer from "./components/Footer";
 import "./App.css";
 
 const renderer = new marked.Renderer();
@@ -42,6 +43,10 @@ class App extends React.Component {
     const mark = {
       __html: marked(this.state.value, { renderer: renderer, sanitize: true })
     };
+    const footer = {
+      link: "https://minggas.website",
+      title: "Link to Minggas Website"
+    };
     return (
       <section className={className}>
         <MarkdownInput
@@ -58,6 +63,9 @@ class App extends React.Component {
           className={previewClassName}
           id={previewId}
         />
+        <Footer link={footer.link} title={footer.title}>
+          Minggas
+        </Footer>
       </section>
     );
   }
