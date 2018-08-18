@@ -102,3 +102,11 @@ table th {
   background-color: hsl(210, 13%, 50%);
   color: hsl(0, 0%, 100%);
 }
+
+.footer-icons svg {
+  transition: all 0.5s ease-out;
+}
+
+.footer-icons svg:hover {
+  fill: blue;
+}

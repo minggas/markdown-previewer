@@ -63,9 +63,7 @@ class App extends React.Component {
           className={previewClassName}
           id={previewId}
         />
-        <Footer link={footer.link} title={footer.title}>
-          Minggas
-        </Footer>
+        <Footer />
       </section>
     );
   }
