@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import GitRibbon from "./components/GitRibbon";
 //import registerServiceWorker from './registerServiceWorker';
 
 const param = {
