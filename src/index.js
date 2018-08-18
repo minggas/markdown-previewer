@@ -13,7 +13,7 @@ const param = {
   previewId: "preview",
   defaultValue: `
 # MARKDOWN PREVIEWER
-## A FCC project
+## A FCC project by Minggas
 ---
 You can make your text **bold** or  put some *emphasis* on it.
   
